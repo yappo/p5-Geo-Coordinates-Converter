@@ -1,0 +1,23 @@
+Changes
+lib/Geo/Coordinates/Converter.pm
+lib/Geo/Coordinates/Converter/Datum.pm
+lib/Geo/Coordinates/Converter/Datum/Grs67.pm
+lib/Geo/Coordinates/Converter/Datum/Grs80.pm
+lib/Geo/Coordinates/Converter/Datum/Jgd2000.pm
+lib/Geo/Coordinates/Converter/Datum/Tokyo.pm
+lib/Geo/Coordinates/Converter/Datum/Wgs72.pm
+lib/Geo/Coordinates/Converter/Datum/Wgs84.pm
+lib/Geo/Coordinates/Converter/Format.pm
+lib/Geo/Coordinates/Converter/Format/Degree.pm
+lib/Geo/Coordinates/Converter/Format/Dms.pm
+lib/Geo/Coordinates/Converter/Point.pm
+Makefile.PL
+MANIFEST			This list of files
+META.yml
+README
+t/00_compile.t
+t/01_constructor.t
+t/02_format.t
+t/03_datum.t
+t/04_convert.t
+t/10_point.t
