@@ -1,5 +1,9 @@
 Revision history for Geo-Coordinates-Converter
 
+0.04    2008-01-16T15:52:22+09:00
+        - fixed dms format (example case +N1.1.1.111) is dosent work bug 
+        - add inc directory in distfiles
+
 0.03    2006-12-21T18:15:14+09:00
         - Added to Geo::Coordinates::Converter::Point the input options for latitude and longitude
 

@@ -5,7 +5,7 @@ use warnings;
 use base qw( Class::Accessor::Fast );
 __PACKAGE__->mk_accessors(qw/ source current /);
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 use Carp;
 use String::CamelCase qw( camelize );
