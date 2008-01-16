@@ -13,8 +13,9 @@ sub name { 'dms' }
 sub detect {
     my($self, $point) = @_;
 
-    return unless $point->lat =~ /^[\-\+NS]?\d{1,2}\.\d\d\.\d\d(?:\.\d+)$/i;
-    return unless $point->lng =~ /^[\-\+EW]?\d{1,3}\.\d\d\.\d\d(?:\.\d+)$/i;
+    return unless $point->lat =~ /^[\-\+NS]?\d{1,2}\.\d\d?\.\d\d?(?:\.\d+)$/i;
+    return unless $point->lng =~ /^[\-\+EW]?\d{1,3}\.\d\d?\.\d\d?(?:\.\d+)$/i;
+
     return $self->name;
 }
 
