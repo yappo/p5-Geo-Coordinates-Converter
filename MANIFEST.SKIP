@@ -23,5 +23,5 @@ t/plugins
 t/regression
 t/core
 ^#
-^inc/
 \.svn/
+^\.shipit$
