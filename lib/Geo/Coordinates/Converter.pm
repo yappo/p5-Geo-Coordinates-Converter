@@ -52,7 +52,7 @@ sub new {
     }
 
     $self->format_detect($self->source) unless $source->format;
-    $self->normaraiz($self->source);
+    $self->normalize($self->source);
     $self->reset;
 
     $self;
@@ -92,9 +92,10 @@ sub format_detect {
     $point->format;
 }
 
-sub normaraiz {
+sub normaraiz { goto &normalize; } # alias for backward compatibility.
+sub normalize {
     my($self, $point) = @_;
-    $self->formats($point->format)->normaraiz($point);
+    $self->formats($point->format)->normalize($point);
     $point;
 }
 

@@ -9,7 +9,8 @@ use Carp;
 sub name { '' }
 sub detect { croak 'This method is unimplemented' }
 
-sub normaraiz {
+sub normaraiz { goto &normalize } # alias for backward compatibility
+sub normalize {
     my($self, $point) = @_;
 
     for my $meth (qw/ lat lng /) {
