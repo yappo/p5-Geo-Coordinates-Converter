@@ -5,6 +5,8 @@ use warnings;
 use base qw( Class::Accessor::Fast );
 __PACKAGE__->mk_accessors(qw/ source current /);
 
+use 5.008001;
+
 our $VERSION = '0.04';
 
 use Carp;
