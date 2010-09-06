@@ -9,6 +9,8 @@ requires $_ for (qw/ Class::Accessor::Fast Readonly String::CamelCase Storable U
 
 author_tests 'xt';
 
+test_requires 'YAML';
+
 use_test_base;
 auto_include;
 auto_install;
