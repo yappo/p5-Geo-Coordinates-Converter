@@ -1,6 +1,7 @@
 Changes
 inc/Module/AutoInstall.pm
 inc/Module/Install.pm
+inc/Module/Install/AuthorTests.pm
 inc/Module/Install/AutoInstall.pm
 inc/Module/Install/Base.pm
 inc/Module/Install/Can.pm
@@ -17,6 +18,7 @@ inc/Test/Base/Filter.pm
 inc/Test/Builder.pm
 inc/Test/Builder/Module.pm
 inc/Test/More.pm
+inc/YAML.pm
 lib/Geo/Coordinates/Converter.pm
 lib/Geo/Coordinates/Converter/Datum.pm
 lib/Geo/Coordinates/Converter/Datum/Grs67.pm

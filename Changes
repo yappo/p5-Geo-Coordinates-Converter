@@ -1,5 +1,11 @@
 Revision history for Geo-Coordinates-Converter
 
+0.05    2010-09-08T02:58:06+09:00
+        - added test_requires 'YAML' for Test::Base (tokuhirom)
+        - depended perl 5.8.1 (tokuhirom)
+        - fixed authors test fials (yappo)
+        - fixed method name typo s/normaraiz/normalize/g (tokuhirom)
+
 0.04    2008-01-16T15:52:22+09:00
         - fixed dms format (example case +N1.1.1.111) is dosent work bug 
         - add inc directory in distfiles

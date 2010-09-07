@@ -7,7 +7,7 @@ __PACKAGE__->mk_accessors(qw/ source current /);
 
 use 5.008001;
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 use Carp;
 use String::CamelCase qw( camelize );

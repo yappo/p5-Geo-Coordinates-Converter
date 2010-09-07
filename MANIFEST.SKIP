@@ -25,3 +25,4 @@ t/core
 ^#
 \.svn/
 ^\.shipit$
+\.git
