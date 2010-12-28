@@ -41,7 +41,7 @@ as for these formats, the added thing is possible.
 
 =head1 AUTHOR
 
-Kazuhiro Osawa E<lt>ko@yappo.ne.jpE<gt>
+Kazuhiro Osawa E<lt>yappo {at} shibuya {dot} plE<gt>
 
 =head1 SEE ALSO
 
