@@ -1,5 +1,9 @@
 Revision history for Geo-Coordinates-Converter
 
+0.06    2010-12-28T17:27:05+09:00
+	- s/use base/use parent/
+        - modern layout.
+
 0.05    2010-09-08T02:58:06+09:00
         - added test_requires 'YAML' for Test::Base (tokuhirom)
         - depended perl 5.8.1 (tokuhirom)
