@@ -1,8 +1,7 @@
 package Geo::Coordinates::Converter::Datum;
-
 use strict;
 use warnings;
-use base qw( Class::Accessor::Fast );
+use parent 'Class::Accessor::Fast';
 
 use Carp;
 use Readonly;

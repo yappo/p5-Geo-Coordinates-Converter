@@ -1,8 +1,7 @@
 package Geo::Coordinates::Converter;
-
 use strict;
 use warnings;
-use base qw( Class::Accessor::Fast );
+use parent 'Class::Accessor::Fast';
 __PACKAGE__->mk_accessors(qw/ source current /);
 
 use 5.008001;

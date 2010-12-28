@@ -1,8 +1,7 @@
 package Geo::Coordinates::Converter::Format::Dms;
-
 use strict;
 use warnings;
-use base qw( Geo::Coordinates::Converter::Format );
+use parent 'Geo::Coordinates::Converter::Format';
 
 use POSIX;
 

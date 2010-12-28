@@ -1,8 +1,7 @@
 package Geo::Coordinates::Converter::Datum::Tokyo;
-
 use strict;
 use warnings;
-use base qw( Geo::Coordinates::Converter::Datum );
+use parent 'Geo::Coordinates::Converter::Datum';
 
 sub name { 'tokyo' }
 sub radius { 6377397.155 }

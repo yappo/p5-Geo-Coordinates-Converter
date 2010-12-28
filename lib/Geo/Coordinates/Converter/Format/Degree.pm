@@ -1,8 +1,7 @@
 package Geo::Coordinates::Converter::Format::Degree;
-
 use strict;
 use warnings;
-use base qw( Geo::Coordinates::Converter::Format );
+use parent 'Geo::Coordinates::Converter::Format';
 
 our $DIGITS = 6;
 

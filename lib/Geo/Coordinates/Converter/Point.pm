@@ -1,9 +1,7 @@
 package Geo::Coordinates::Converter::Point;
-
 use strict;
 use warnings;
-
-use base qw( Class::Accessor::Fast );
+use parent 'Class::Accessor::Fast';
 __PACKAGE__->mk_accessors(qw/ lat lng datum format height /);
 
 use Storable ();
