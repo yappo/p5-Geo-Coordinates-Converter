@@ -15,3 +15,5 @@ Osawa
 lat
 lng
 geo
+formatter
+orthogonalization
