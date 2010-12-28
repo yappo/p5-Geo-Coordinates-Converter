@@ -93,7 +93,7 @@ after it converts it, [Geo::Coordinates::Converter::Point](http://search.cpan.or
 
 # AUTHOR
 
-Kazuhiro Osawa <ko@yappo.ne.jp>
+Kazuhiro Osawa <yappo {at} shibuya {dot} pl>
 
 # SEE ALSO
 

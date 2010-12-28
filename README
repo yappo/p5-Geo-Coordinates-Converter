@@ -71,7 +71,7 @@ METHODS
             my $point = $geo->convert('degree');
 
 AUTHOR
-    Kazuhiro Osawa <ko@yappo.ne.jp>
+    Kazuhiro Osawa <yappo {at} shibuya {dot} pl>
 
 SEE ALSO
     Geo::Coordinates::Converter::Point, Geo::Coordinates::Converter::Format,
