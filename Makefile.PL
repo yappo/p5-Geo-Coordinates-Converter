@@ -7,7 +7,6 @@ githubmeta;
 
 requires 'parent';
 requires 'Class::Accessor::Lite' => '0.05';
-requires 'Readonly';
 requires 'String::CamelCase';
 requires 'Storable';
 requires 'UNIVERSAL::require';
