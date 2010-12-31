@@ -14,6 +14,12 @@ sub radius { 0 }
 sub rate { 0 }
 sub translation { +{ x => 0, y => 0, z => 0 } }
 
+sub new {
+    my($class, $args) = @_;
+    $args = +{} unless defined $args;
+    bless { %{ $args } }, $class;
+}
+
 sub load_datum {
     my($self, $datum) = @_;
 
