@@ -1,7 +1,6 @@
 package Geo::Coordinates::Converter::Format;
 use strict;
 use warnings;
-use parent 'Class::Accessor::Fast';
 
 use Carp;
 
