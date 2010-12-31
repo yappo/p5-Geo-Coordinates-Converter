@@ -7,9 +7,9 @@ githubmeta;
 
 requires 'parent';
 requires 'Class::Accessor::Lite' => '0.05';
+requires 'Module::Load';
 requires 'String::CamelCase';
 requires 'Storable';
-requires 'UNIVERSAL::require';
 
 tests 't/*.t';
 author_tests 'xt';

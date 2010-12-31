@@ -5,7 +5,7 @@ use warnings;
 use Carp;
 use Readonly;
 use String::CamelCase qw( camelize );
-use UNIVERSAL::require;
+use Module::Load ();
 
 use constant RADIAN => 4 * atan2(1, 1) / 180;
 
@@ -25,14 +25,15 @@ sub load_datum {
 
     unless (ref $datum) {
         if ($datum =~ s/^\+//) {
-            $datum->require or die $@;
+            Module::Load::load($datum);
         } else {
             my $name = $datum;
             $datum = sprintf '%s::%s', ref $self, camelize($name);
-            $datum->require;
+            local $@;
+            eval { Module::Load::load($datum) };
             if ($@ && ref $self ne __PACKAGE__) {
                 $datum = sprintf '%s::%s', __PACKAGE__, camelize($name);
-                $datum->require or die $@;
+                Module::Load::load($datum);
             }
         }
         $datum = $datum->new;

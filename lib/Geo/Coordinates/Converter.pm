@@ -11,7 +11,7 @@ our $VERSION = '0.06';
 
 use Carp;
 use String::CamelCase qw( camelize );
-use UNIVERSAL::require;
+use Module::Load ();
 
 use Geo::Coordinates::Converter::Point;
 
@@ -30,7 +30,7 @@ sub new {
 
     my $converter = delete $opt{converter} || $DEFAULT_CONVERTER;
     unless (ref $converter) {
-        $converter->require or die $@;
+        Module::Load::load($converter);
         $converter = $converter->new unless ref $converter;
     }
 
@@ -63,11 +63,11 @@ sub load_format {
 
     unless (ref $format) {
         if ($format =~ s/^\+//) {
-            $format->require or die $@;
+            Module::Load::load($format);
         } else {
             my $name = $format;
             $format = sprintf '%s::Format::%s', ref $self, camelize($name);
-            $format->require or die $@;
+            Module::Load::load($format);
         }
         $format = $format->new;
     }
