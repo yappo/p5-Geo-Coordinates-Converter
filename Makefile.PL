@@ -6,7 +6,7 @@ readme_markdown_from 'lib/Geo/Coordinates/Converter.pm';
 githubmeta;
 
 requires 'parent';
-requires 'Class::Accessor::Fast';
+requires 'Class::Accessor::Lite' => '0.05';
 requires 'Readonly';
 requires 'String::CamelCase';
 requires 'Storable';

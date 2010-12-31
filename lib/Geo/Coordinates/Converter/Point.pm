@@ -1,8 +1,9 @@
 package Geo::Coordinates::Converter::Point;
 use strict;
 use warnings;
-use parent 'Class::Accessor::Fast';
-__PACKAGE__->mk_accessors(qw/ lat lng datum format height /);
+use Class::Accessor::Lite (
+    rw => [qw/ lat lng datum format height /],
+);
 
 use Storable ();
 
@@ -10,8 +11,9 @@ use Storable ();
 *longitude = \&lng;
 
 sub new {
-    my $class = shift;
-    my $self = $class->SUPER::new(@_);
+    my($class, $args) = @_;
+    $args = +{} unless defined $args;
+    my $self = bless { %{ $args } }, $class;
     $self->{lat} ||= $self->{latitude} || '0.000000';
     $self->{lng} ||= $self->{longitude} || '0.000000';
     $self->{height} ||= 0;
