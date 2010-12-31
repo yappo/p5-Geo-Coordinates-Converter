@@ -13,6 +13,7 @@ sub normalize {
     my($self, $point) = @_;
 
     for my $meth (qw/ lat lng /) {
+        next unless defined $point->$meth;
         if ($point->$meth =~ /^\+(.+)$/) {
             $point->$meth($1);
         } elsif (my($prefix, $val) = $point->$meth =~ /^([NEWS])(.+)$/i) {
