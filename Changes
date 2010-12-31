@@ -1,5 +1,10 @@
 Revision history for Geo-Coordinates-Converter
 
+0.07    2011-01-01T04:26:11+09:00
+	- s/use parent 'Class::Accessor::Fast'/use Class::Accessor::Lite/
+	- s/use Readonly/use constant/
+	- s/use UNIVERSAL::require/use Module::Load/
+
 0.06    2010-12-28T17:27:05+09:00
 	- s/use base/use parent/
         - modern layout.
