@@ -7,7 +7,7 @@ use Class::Accessor::Lite (
 
 use 5.008001;
 
-our $VERSION = '0.07';
+our $VERSION = '0.08';
 
 use Carp;
 use String::CamelCase qw( camelize );

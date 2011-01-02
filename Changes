@@ -1,5 +1,8 @@
 Revision history for Geo-Coordinates-Converter
 
+0.08    2011-01-02T12:10:29+09:00
+        - remove 'use Readonly' in Geo::Coordinates::Converter::Datum
+
 0.07    2011-01-01T04:26:11+09:00
 	- s/use parent 'Class::Accessor::Fast'/use Class::Accessor::Lite/
 	- s/use Readonly/use constant/
