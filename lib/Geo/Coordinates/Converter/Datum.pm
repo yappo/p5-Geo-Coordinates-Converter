@@ -3,7 +3,6 @@ use strict;
 use warnings;
 
 use Carp;
-use Readonly;
 use String::CamelCase qw( camelize );
 use Module::Load ();
 
