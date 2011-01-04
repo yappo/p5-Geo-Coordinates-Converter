@@ -5,6 +5,20 @@ use Class::Accessor::Lite (
     rw => [qw/ lat lng datum format height /],
 );
 
+# back compatibility
+sub mk_accessors {
+    my($class, @args) = @_;
+    Class::Accessor::Lite->mk_accessors(@_);
+}
+sub mk_ro_accessors {
+    my($class, @args) = @_;
+    Class::Accessor::Lite->mk_ro_accessors(@_);
+}
+sub mk_wo_accessors {
+    my($class, @args) = @_;
+    Class::Accessor::Lite->mk_wo_accessors(@_);
+}
+
 use Storable ();
 
 *latitude  = \&lat;
