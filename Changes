@@ -1,5 +1,8 @@
 Revision history for Geo-Coordinates-Converter
 
+0.09    2011-01-04T11:52:46+09:00
+        - add back compatibility Class::Accessor methods
+
 0.08    2011-01-02T12:10:29+09:00
         - remove 'use Readonly' in Geo::Coordinates::Converter::Datum
 
