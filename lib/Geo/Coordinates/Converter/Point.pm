@@ -5,6 +5,8 @@ use Class::Accessor::Lite (
     rw => [qw/ lat lng datum format height /],
 );
 
+use Geo::Coordinates::Converter;
+
 # back compatibility
 sub mk_accessors {
     my($class, @args) = @_;
@@ -41,6 +43,13 @@ sub clone {
     $clone;
 }
 
+sub converter {
+    my $self = shift;
+    Geo::Coordinates::Converter->new(
+        point => $self,
+    )->convert( @_ );
+}
+
 1;
 
 __END__
@@ -71,6 +80,8 @@ Geo::Coordinates::Converter::Point - the coordinates object
     });
 
     my $clone = $point->clone;
+
+    my $new_point = $point->converter( degree => 'wgs84' );
 
 
 =head1 DESCRIPTION
@@ -113,6 +124,18 @@ accessor of coordinates format
 =item clone
 
 clone object
+
+=item converter
+
+wrapper of Geo::Coordinates::Converter->convert.
+
+    my $new_point = $point->converter(degree => 'wgs84');
+
+the method same code is under.
+
+    my $new_point = Geo::Coordinates::Converter->new(
+        point => $point,
+    )->convert(degree => 'wgs84');
 
 =back
 

@@ -45,6 +45,7 @@ t/02_format.t
 t/03_datum.t
 t/04_convert.t
 t/10_point.t
+t/11_point-converter.t
 xt/98-pod.t
 xt/99-perl-critic.t
 xt/99-pod-coverage.t
