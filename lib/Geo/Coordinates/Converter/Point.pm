@@ -104,7 +104,7 @@ alias of lng
 
 =item datum
 
-accessor of datum
+accessor of datum. default is C<wgs84>.
 
 =item format
 
