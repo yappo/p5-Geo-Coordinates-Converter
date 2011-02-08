@@ -1,5 +1,9 @@
 Revision history for Geo-Coordinates-Converter
 
+0.10    2011-02-08T12:34:23+09:00
+        - add method Geo::Coordinates::Converter::Point->converter
+        - add document in Geo::Coordinates::Converter::Point->datum
+
 0.09    2011-01-04T11:52:46+09:00
         - add back compatibility Class::Accessor methods
 
