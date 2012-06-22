@@ -19,5 +19,4 @@ test_requires 'YAML';
 use_test_base;
 
 auto_set_repository;
-auto_include;
 WriteAll;
