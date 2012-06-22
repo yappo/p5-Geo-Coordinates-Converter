@@ -14,9 +14,9 @@ requires 'Storable';
 tests 't/*.t';
 author_tests 'xt';
 
+build_requires 'Test::Base';
 build_requires 'Test::More';
-test_requires 'YAML';
-use_test_base;
+build_requires 'YAML';
 
 auto_set_repository;
 WriteAll;

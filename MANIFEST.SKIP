@@ -21,3 +21,4 @@
 \.gitignore
 \.sw[po]$
 ^MYMETA\.yml$
+MYMETA.json
