@@ -12,8 +12,8 @@ sub name { 'dms' }
 sub detect {
     my($self, $point) = @_;
 
-    return unless defined $point->lat && $point->lat =~ /^[\-\+NS]?\d{1,2}\.\d\d?\.\d\d?(?:\.\d+)$/i;
-    return unless defined $point->lng && $point->lng =~ /^[\-\+EW]?\d{1,3}\.\d\d?\.\d\d?(?:\.\d+)$/i;
+    return unless defined $point->lat && $point->lat =~ /^[\-\+NS]?[0-9]{1,2}\.[0-9][0-9]?\.[0-9][0-9]?(?:\.[0-9]+)$/i;
+    return unless defined $point->lng && $point->lng =~ /^[\-\+EW]?[0-9]{1,3}\.[0-9][0-9]?\.[0-9][0-9]?(?:\.[0-9]+)$/i;
 
     return $self->name;
 }
@@ -22,7 +22,7 @@ sub to {
     my($self, $point) = @_;
 
     for my $meth (qw/ lat lng /) {
-        my($ws, $deg, $min, $sec) = $point->$meth =~ /^(\-?)(\d+)\.(\d+)\.(\d+(?:\.\d+)?)$/i;
+        my($ws, $deg, $min, $sec) = $point->$meth =~ /^(\-?)([0-9]+)\.([0-9]+)\.([0-9]+(?:\.[0-9]+)?)$/i;
         my $ret = $deg + ($min / 60) + ($sec / 3600);
         $ret = $ws =~ /\-/i ? -1 * $ret : $ret;
         $point->$meth($ret);
