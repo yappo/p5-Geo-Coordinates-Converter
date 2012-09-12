@@ -24,6 +24,7 @@ lib/Geo/Coordinates/Converter/Datum/Wgs84.pm
 lib/Geo/Coordinates/Converter/Format.pm
 lib/Geo/Coordinates/Converter/Format/Degree.pm
 lib/Geo/Coordinates/Converter/Format/Dms.pm
+lib/Geo/Coordinates/Converter/Format/Milliseconds.pm
 lib/Geo/Coordinates/Converter/Point.pm
 Makefile.PL
 MANIFEST			This list of files

@@ -16,7 +16,7 @@ use Module::Load ();
 use Geo::Coordinates::Converter::Point;
 
 our $DEFAULT_CONVERTER = 'Geo::Coordinates::Converter::Datum';
-our $DEFAULT_FORMAT = [qw/ Degree Dms /];
+our $DEFAULT_FORMAT = [qw/ Degree Dms Milliseconds /];
 our $DEFAULT_INETRNAL_FORMAT = 'degree';
 
 sub add_default_formats {
@@ -219,6 +219,12 @@ Geo::Coordinates::Converter - simple converter of geo coordinates
     print $point2->datum;
     print $point2->format;
 
+can you use milliseconds format
+
+    my $geo = Geo::Coordinates::Converter->new( lat => -128064218, lng => 502629380 );
+    $geo->format('degree');
+    is($geo->lat, -35.573394);
+    is($geo->lng, 139.619272);
 
 =head1 DESCRIPTION
 
