@@ -1,5 +1,10 @@
 Revision history for Geo-Coordinates-Converter
 
+0.12    2012-09-12T14:42:59+09:00
+        - add milliseconds format
+        - more strict check for degree format detect
+        - fixed utf8 flagged number's bug
+
 0.11    2012-06-22T15:15:34+09:00
         - fixed Makefile.PL Bug (RT #73468)
 
