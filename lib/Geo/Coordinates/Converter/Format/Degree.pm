@@ -10,8 +10,14 @@ sub name { 'degree' }
 sub detect {
     my($self, $point) = @_;
 
-    return unless defined $point->lat && $point->lat =~ /^[\-\+NS]?\d{1,2}(?:\.\d+)$/i;
-    return unless defined $point->lng && $point->lng =~ /^[\-\+WE]?\d{1,3}(?:\.\d+)$/i;
+    return unless defined $point->lat && $point->lat =~ /^[\-\+NS]?(\d{1,2}(?:\.\d+))$/i;
+    my $lat_nums = $1;
+    return unless defined $point->lng && $point->lng =~ /^[\-\+WE]?(\d{1,3}(?:\.\d+))$/i;
+    my $lng_nums = $1;
+
+    return unless -90  < $lat_nums && $lat_nums < 90 ;
+    return unless -180 < $lng_nums && $lng_nums < 180;
+
     return $self->name;
 }
 
