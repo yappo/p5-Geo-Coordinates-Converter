@@ -52,7 +52,7 @@ Kazuhiro Osawa E<lt>yappo {at} shibuya {dot} plE<gt>
 =head1 SEE ALSO
 
 L<Geo::Coordinates::Converter>, 
-L<Geo::Coordinates::Converter::Format::Dms>, L<Geo::Coordinates::Converter::Format::Degree>
+L<Geo::Coordinates::Converter::Format::Dms>, L<Geo::Coordinates::Converter::Format::Degree>, L<Geo::Coordinates::Converter::Format::Milliseconds>
 
 =head1 LICENSE
 
