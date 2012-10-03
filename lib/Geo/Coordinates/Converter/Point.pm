@@ -113,6 +113,10 @@ accessor of longitude
 
 alias of lng
 
+=item height
+
+sea level (meters).
+
 =item datum
 
 accessor of datum. default is C<wgs84>.
