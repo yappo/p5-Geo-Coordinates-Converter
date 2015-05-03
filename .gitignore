@@ -1,6 +1,7 @@
 .*
 !.gitignore
 !.shipit
+!.travis.yml
 *.o
 *.obj
 *.bs
