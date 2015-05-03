@@ -3,7 +3,7 @@ use strict;
 use warnings;
 use parent 'Geo::Coordinates::Converter::Format';
 
-use POSIX;
+use POSIX ();
 
 sub name { 'milliseconds' }
 
@@ -36,7 +36,7 @@ sub from {
 
 sub round {
     my($self, $val) = @_;
-    ceil($val);
+    POSIX::ceil($val);
 }
 
 1;

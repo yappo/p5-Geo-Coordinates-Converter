@@ -3,7 +3,7 @@ use strict;
 use warnings;
 use parent 'Geo::Coordinates::Converter::Format';
 
-use POSIX;
+use POSIX ();
 
 our $DIGITS = 3;
 
@@ -37,8 +37,8 @@ sub from {
     for my $meth (qw/ lat lng /) {
         my($ws, $degree) = $point->$meth =~ /^(\-?)(.+)$/;
         
-        my $deg  = floor($degree);
-        my $min  = floor(($degree - $deg) * 60 % 60);
+        my $deg  = POSIX::floor($degree);
+        my $min  = POSIX::floor(($degree - $deg) * 60 % 60);
         my $sec  = ($degree - $deg) * 3600 - $min * 60;
         $point->$meth(sprintf "%s%s.%s.%s", $ws || '', $deg, $min, $sec);
     }
