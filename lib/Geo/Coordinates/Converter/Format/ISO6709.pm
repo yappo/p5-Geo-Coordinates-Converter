@@ -3,7 +3,7 @@ use strict;
 use warnings;
 use parent 'Geo::Coordinates::Converter::Format';
 
-use POSIX;
+use POSIX ();
 
 use Geo::Coordinates::Converter::Format::Dms;
 
