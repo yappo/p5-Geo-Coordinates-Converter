@@ -36,7 +36,7 @@ Geo::Coordinates::Converter::Point::ISO6709 - location point class for ISO6709
 
 =head1 METHOD
 
-=head2 iso6709
+=head2 ISO6709
 
 can you set the ISO6709 string.
 
