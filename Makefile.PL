@@ -1,4 +1,8 @@
 use inc::Module::Install;
+use Module::Install::ReadmeFromPod;
+use Module::Install::ReadmeMarkdownFromPod; 
+use Module::Install::GithubMeta;
+use Module::Install::Repository;
 name 'Geo-Coordinates-Converter';
 all_from 'lib/Geo/Coordinates/Converter.pm';
 readme_from 'lib/Geo/Coordinates/Converter.pm';
