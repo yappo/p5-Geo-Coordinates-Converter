@@ -10,8 +10,8 @@ sub name { 'milliseconds' }
 sub detect {
     my($self, $point) = @_;
 
-    return unless defined $point->lat && -324_000_000 < $point->lat && $point->lat < 324_000_000 && $point->lat =~ /^-?[0-9]+$/;
-    return unless defined $point->lng && -648_000_000 < $point->lng && $point->lng < 648_000_000 && $point->lng =~ /^-?[0-9]+$/;
+    return unless defined $point->lat && -324_000_000 lt $point->lat && $point->lat lt 324_000_000 && $point->lat =~ /^-?[0-9]+$/;
+    return unless defined $point->lng && -648_000_000 lt $point->lng && $point->lng lt 648_000_000 && $point->lng =~ /^-?[0-9]+$/;
 
     return $self->name;
 }
