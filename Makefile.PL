@@ -22,5 +22,8 @@ build_requires 'Test::Base';
 build_requires 'Test::More';
 build_requires 'YAML';
 
+test_requires 'Test::Perl::Critic';
+test_requires 'Test::Spelling';
+
 auto_set_repository;
 WriteAll;
